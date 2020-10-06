@@ -1,0 +1,1 @@
+# moodle-local_user_identity_checker
