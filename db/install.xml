@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/user_identity_checker/db" VERSION="2020070200" COMMENT="XMLDB file for Moodle local/user_identity_checker"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="user_identity_checker_jwt" COMMENT="user_identity_checker jwt tokens">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="dashboardurl" TYPE="char" LENGTH="254" NOTNULL="false" SEQUENCE="false"/>
+                <FIELD NAME="publickey" TYPE="text" LENGTH="512" NOTNULL="false" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="dashboardurl" UNIQUE="true" FIELDS="dashboardurl"/>
+            </INDEXES>
+        </TABLE>
+
+    </TABLES>
+</XMLDB>
